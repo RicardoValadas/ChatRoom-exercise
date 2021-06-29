@@ -1,0 +1,10 @@
+<span><a [routerLink]="['/create-room']">Create room</a></span>
+<h2>Rooms</h2>
+<section>
+    <ul>
+        <li *ngFor="let roomData of roomsArray">
+            {{roomData.id}} -
+            <a [routerLink]="['/chat/roomId']">{{roomData.roomName}}</a>
+        </li>
+    </ul>
+</section>

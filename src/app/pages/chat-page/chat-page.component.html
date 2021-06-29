@@ -1,0 +1,20 @@
+<section>
+    <form (ngSubmit)="handleSubmit()">
+        <textarea [(ngModel)]='userMsg' name="userMsg" id="" cols=" 30" rows="10"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<ul>
+
+
+    <h2>Messages:</h2>
+    <li *ngFor="let user of messagesArray">
+
+        <p><img [src]="getUsersDetails(user.userId).image"><br>
+            <span>User:</span> {{getUsersDetails(user.userId).username}}
+            <br><span>Date:</span> {{user.date}}
+            <br> <span>message:</span> {{user.message}}
+        </p>
+    </li>
+</ul>

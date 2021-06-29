@@ -1,0 +1,6 @@
+<h2>Create a new Room</h2>
+<h3>{{roomValue.toUpperCase()}}</h3>
+<form (ngSubmit)="handleSubmit()">
+    <input [(ngModel)]="roomValue" name="room">
+    <input type="submit" value="Create Room">
+</form>

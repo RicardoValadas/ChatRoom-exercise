@@ -1,0 +1,11 @@
+<div id="loginButtons">
+    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/register']">Register</a>
+</div>
+<h3>Users</h3>
+<ul>
+    <li *ngFor="let user of usersArray">
+        <img [src]="user.image">
+        <p>{{user.username}}</p>
+    </li>
+</ul>
